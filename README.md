@@ -4,6 +4,8 @@ It is associated with the companion paper 'The impact of lithology on fjord morp
 
 The script 'Main.m' allows for the extraction of fjord widths and depths, with drainage area computed as a proxy for ice discharge. The code 'plot_results.m' computes the power-law fits for width or depth against drainage area, for each lithological domain.
 
+The 'GrayC.mat' colormap used in this script has been created by Fabio Crameri. Crameri, F. (2018), Scientific colour-maps, Zenodo, doi:10.5281/zenodo.1243862
+
 Authors: Maxime Bernard (Rennes University, France), Philippe Steer (Rennes University, France).
 
 IMPORTANT: to perform the analyses you will need to download first the BedMachine V3 DEM (Morlighem et al., 2017), and the geological map data (Henriksen et al., 2000)
