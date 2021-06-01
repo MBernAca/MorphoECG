@@ -316,7 +316,7 @@ As_log = log10(As_max);
 
 % ------- Plot fjord depth along centerlines ----------------
 % To plot with valleys above sea-level, uncomment the second 'ind'
-figure;load grayC.mat; load roma.mat; set(gcf,'units','normalized','outerposition',[0 0 1 1]);
+figure;load grayC.mat; set(gcf,'units','normalized','outerposition',[0 0 1 1]);
 ind = find(Dv>0 & geol5>1 & zc_min<0); %Keep points with depth > 0 and with lithology identified (no ice, or in water), keep only fjords
 %ind = find(Dv>0 & geol5>1); %Keep points with depth > 0 and with lithology identified (no ice, or in water), glacial valleys and fjords
 % Background topography

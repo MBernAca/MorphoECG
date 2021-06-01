@@ -42,7 +42,6 @@ function plot_results(geol,wc,As,geolmap,axy,labelax,TableName)
     plot(xmid,10.^yfitted-10.^CI(:,1),'k--','LineWidth',0.5);
     
     % save coefficients
-    table1= mdl.Coefficients;
     a1=10^coef(1);b1=coef(2);CI1=coefCI(mdl);
     std1 = 10^std_coef(1); std1b = std_coef(2);
     table1 = table([a1;b1],[std1;std1b],[tStat_coef(1);tStat_coef(2)],[pValue_coef(1);pValue_coef(2)],'VariableNames',{'coefficients','SE','tStat','pValue'},'RowNames',{'1','2'});
@@ -120,7 +119,6 @@ function plot_results(geol,wc,As,geolmap,axy,labelax,TableName)
     plot(xmid,10.^yfitted-10.^CI(:,1),'k--','LineWidth',0.5);
     
     % save coefficients
-    table3= mdl.Coefficients;
     a3=10^coef(1);b3=coef(2);CI3=coefCI(mdl);
     std3 = 10^std_coef(1); std3b = std_coef(2);
     table3 = table([a3;b3],[std3;std3b],[tStat_coef(1);tStat_coef(2)],[pValue_coef(1);pValue_coef(2)],'VariableNames',{'coefficients','SE','tStat','pValue'},'RowNames',{'1','2'});
@@ -143,7 +141,7 @@ function plot_results(geol,wc,As,geolmap,axy,labelax,TableName)
     
     meany2=meany;meany2(meany==0)=[];xmid(meany==0)=[];SumBin(meany==0)=[];
     % Fit power law weighted by the number of count in each bin
-     mdl = fitlm(xmid,meany2,'Weights',SumBin);
+    mdl = fitlm(xmid,meany2,'Weights',SumBin);
     % Get Coefficient (intercept and exponent)
     coef = mdl.Coefficients{:,'Estimate'}; 
     std_coef = mdl.Coefficients{:,'SE'};
@@ -160,7 +158,6 @@ function plot_results(geol,wc,As,geolmap,axy,labelax,TableName)
     plot(xmid,10.^yfitted-10.^CI(:,1),'k--','LineWidth',0.5);
     
     %save coefficients
-    table4= mdl.Coefficients;
     a4=10^coef(1);b4=coef(2);CI4=coefCI(mdl);
     std4 = 10^std_coef(1); std4b = std_coef(2);
     table4 = table([a4;b4],[std4;std4b],[tStat_coef(1);tStat_coef(2)],[pValue_coef(1);pValue_coef(2)],'VariableNames',{'coefficients','SE','tStat','pValue'},'RowNames',{'1','2'});
