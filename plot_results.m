@@ -1,8 +1,8 @@
-%To plot results
 
 function plot_results(geol,wc,As,geolmap,axy,labelax,TableName)
-
-    load lajolla.mat
+    % This function computes and plot power-law fits for width and depth
+    % against drainage area, for each lithological domain.
+    
     % Compute log10
     wc_log2 = log10(wc);
     As_log = log10(As);

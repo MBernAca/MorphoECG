@@ -437,7 +437,7 @@ xlabel('Valley width (km)');ylabel('Valley depth (km)');
 ind_As = find(As_log>4.8);
 As_max2 = As_max;As_max2(ind_As) = [];
 Dv2 = Dv; Dv2(ind_As) = []; geol5b = geol5; geol5b(ind_As) = [];zc_min2 = zc_min; zc_min2(ind_As) = [];
-% Limite range for drainage area
+% Limit range for drainage area
 ind = find(Dv2>0 & zc_min2<0); %Only Fjords
 %ind = find(Dv2>0); %Fjord and valleys
 labelax = {'Drainage area (km²)','Valley Depth (km)'};
